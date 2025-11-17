@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Karate Club - Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    form {
+      max-width: 500px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin: 1rem 0 0.5rem 0;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .submit-btn {
+      margin-top: 1rem;
+      background: #e03e2f;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 3px;
+    }
+    .submit-btn:hover {
+      background: #b02a22;
+    }
+    .message {
+      margin-top: 1rem;
+      font-weight: 600;
+      color: green;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Karate Club</h1>
+    <div class="menu-toggle" aria-label="Ouvrir le menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="cours.html">Cours</a>
+      <a href="evenements.html">Événements</a>
+      <a href="professeurs.html">Professeurs</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="container">
+    <h2>Contactez-nous</h2>
+    <form id="contactForm" novalidate>
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" name="nom" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit" class="submit-btn">Envoyer</button>
+      <p class="message" id="confirmationMessage">Merci pour votre message !</p>
+    </form>
+  </section>
+
+  <footer>
+    <p> ☎️ +261 34 43 789 75</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      // Validation simplifiée, simule envoi
+      this.reset();
+      const msg = document.getElementById('confirmationMessage');
+      msg.style.display = 'block';
+      setTimeout(() => {
+        msg.style.display = 'none';
+      }, 4000);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Karate Club - Galerie</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 1rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Karate Club</h1>
+    <div class="menu-toggle" aria-label="Ouvrir le menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="apropos.html">À propos</a>
+      <a href="cours.html">Cours</a>
+      <a href="evenements.html">Événements</a>
+      <a href="professeurs.html">Professeurs</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="container">
+    <h2>Galerie photos</h2>
+    <div class="gallery-grid">
+      <img src="images/karate1.jpeg" alt="Cours de karaté" />
+      <img src="images/karate2.jpeg" alt="Compétition de karaté" />
+      <img src="images/karate3.jpeg" alt="Démonstration au dojo" />
+      <img src="images/karate4.jpeg" alt="Entraînement intensif" />
+      <img src="images/karate5.jpeg" alt="Cours de karaté" />
+      <img src="images/karate6.jpeg" alt="Compétition de karaté" />
+      <img src="images/karate7.jpeg" alt="Démonstration au dojo" />
+      <img src="images/karate8.jpeg" alt="Entraînement intensif" />
+      <img src="images/karate9.jpeg" alt="Cours de karaté" />
+      <img src="images/karate10.jpeg" alt="Compétition de karaté" />
+      <img src="images/karate11.jpeg" alt="Démonstration au dojo" />
+      <img src="images/karate12.jpeg" alt="Entraînement intensif" />
+      <img src="images/karate13.jpeg" alt="Cours de karaté" />
+      <img src="images/karate14.png" alt="Cours de karaté" />
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Karate Club Fianarantsoa</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
